@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Second Chance at Love 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #9575cd;
+        }
+        
+        h1 {
+            color: #7b1fa2;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            font-weight: normal;
+        }
+        
+        .subtitle {
+            color: #ab47bc;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .love-story {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: left;
+            border-left: 5px solid #7b1fa2;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #4a148c;
+        }
+        
+        .love-story h3 {
+            color: #7b1fa2;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .heart {
+            font-size: 2.2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        
+        .button-container {
+            margin: 40px 0;
+            position: relative;
+            height: 130px;
+        }
+        
+        .yes-btn {
+            background: linear-gradient(to right, #7b1fa2, #ab47bc);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.8rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(123, 31, 162, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .yes-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(123, 31, 162, 0.5);
+            background: linear-gradient(to right, #8e24aa, #ba68c8);
+        }
+        
+        .no-btn {
+            background: linear-gradient(to right, #bdbdbd, #e0e0e0);
+            color: #757575;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.8rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(117, 117, 117, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            position: absolute;
+            font-family: 'Georgia', serif;
+        }
+        
+        .no-btn:hover {
+            background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+        }
+        
+        .message-container {
+            display: none;
+            margin-top: 40px;
+            padding: 35px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 15px;
+            border: 2px dashed #7b1fa2;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .message-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            text-align: left;
+        }
+        
+        .romantic-message {
+            flex: 1;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #4a148c;
+        }
+        
+        .romantic-message h2 {
+            color: #7b1fa2;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .images-container {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 320px;
+            gap: 20px;
+        }
+        
+        .image-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .her-image {
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #d1c4e9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .my-image {
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #4fc3f7;
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .her-image:hover, .my-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(123, 31, 162, 0.3);
+        }
+        
+        .her-image:hover {
+            border-color: #7b1fa2;
+        }
+        
+        .my-image:hover {
+            border-color: #0288d1;
+        }
+        
+        .image-caption {
+            margin-top: 8px;
+            font-style: italic;
+            color: #7b1fa2;
+            font-size: 1rem;
+            text-align: center;
+            padding: 5px 10px;
+            background-color: #f3e5f5;
+            border-radius: 15px;
+            width: 90%;
+        }
+        
+        .my-caption {
+            color: #0288d1;
+            background-color: #e1f5fe;
+        }
+        
+        .promise {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f8f4ff;
+            border-radius: 10px;
+            font-style: italic;
+            border-left: 4px solid #ab47bc;
+        }
+        
+        .together-text {
+            text-align: center;
+            margin-top: 15px;
+            color: #7b1fa2;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 10px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #7b1fa2;
+            font-style: italic;
+            font-size: 1.1rem;
+            padding-top: 20px;
+            border-top: 1px solid #d1c4e9;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 1.2rem;
+            color: #ab47bc;
+            opacity: 0.7;
+            animation: floatAround 20s linear infinite;
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(100px, -100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 1s linear forwards;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        
+        .volume-control {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        
+        .volume-control:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+        
+        .volume-icon {
+            font-size: 1.5rem;
+            color: #7b1fa2;
+        }
+        
+        .volume-slider {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 80px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .volume-control:hover .volume-slider {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .container {
+                max-width: 900px;
+                padding: 30px;
+            }
+            
+            .message-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .images-container {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .image-row {
+                width: 30%;
+                max-width: 200px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .yes-btn, .no-btn { 
+                padding: 15px 35px; 
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .button-container { height: 180px; }
+            .message-container { padding: 25px; }
+            .romantic-message { font-size: 1.1rem; }
+            .romantic-message h2 { font-size: 1.6rem; }
+            
+            .message-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+            
+            .images-container {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .image-row {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .her-image, .my-image {
+                max-height: 200px;
+            }
+            
+            .love-story {
+                padding: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .volume-control {
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+            }
+            
+            .volume-slider {
+                right: 5px;
+                width: 70px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .image-row {
+                max-width: 250px;
+            }
+            
+            .her-image, .my-image {
+                max-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <!-- Volume Control -->
+        <div class="volume-control" id="volumeControl">
+            <div class="volume-icon" id="volumeIcon">🔊</div>
+            <input type="range" min="0" max="1" step="0.1" value="0.7" class="volume-slider" id="volumeSlider">
+        </div>
+        
+        <h1>Will You Give Us Another Chance And Be My Valentine? 💫</h1>
+        <p class="subtitle">To the amazing woman I've never stopped admiring...</p>
+        
+        <div class="love-story">
+            <h3>Our Story 💌</h3>
+            <p>
+                Even though we've never met in person, my connection to you has always felt real and meaningful. 
+                Those late-night and every time conversations, shared dreams, and genuine laughter we used to do before created something special 
+                between us. I've carried those memories with me, and they've only grown more precious with time.
+            </p>
+        </div>
+        
+        <div class="heart-container">
+            <div class="heart">💕</div>
+            <div class="heart">✨</div>
+            <div class="heart">🌟</div>
+            <div class="heart">💫</div>
+            <div class="heart">💖</div>
+            <div class="heart">✨</div>
+            <div class="heart">🌟</div>
+            <div class="heart">💫</div>
+        </div>
+        
+        <p style="font-size: 1.3rem; color: #4a148c; margin-bottom: 20px; line-height: 1.6;">
+            Time and distance may have kept us apart, but my admiration for you has only grown stronger. <br>
+            I believe some connections are meant to be rediscovered, and ours feels like one of them. 💞
+        </p>
+        
+        <div class="button-container">
+            <button class="yes-btn" id="yesButton">YES, LET'S TRY AGAIN 💖</button>
+            <button class="no-btn" id="noButton">NOT THIS TIME</button>
+        </div>
+        
+        <div class="message-container" id="messageContainer">
+            <div class="message-content">
+                <div class="romantic-message">
+                    <h2>You Said Yes! My Heart Is Soaring! 🥰</h2>
+                    <p>
+                        Thank you for giving us this second chance! This means more to me than words can express. 
+                        <span style="color: #7b1fa2;">✨</span><br><br>
+                        
+                        I've never stopped thinking about what could have been between us. Even though we've never 
+                        met face-to-face, I've always felt a connection with you that's rare and precious. 
+                        Your smile in photos, your voice in messages, your thoughts in conversations - they've all 
+                        stayed with me. <span style="color: #7b1fa2;">💫</span><br><br>
+
+                        We had our season, and though seasons change, they leave an indelible mark on the landscape 
+                        of who we are. I want you to know that the chapter we shared is one I revisit not with regret, 
+                        but with a deep sense of gratitude. You taught me nuances of joy and connection I hadn’t known 
+                        before, and for that, I will always be thankful. You left a trace of stardust in my world. 
+                        <span style="color: #7b1fa2;">✨</span><br><br>
+
+                        My admiration for you hasn’t faded; it has evolved. From afar, I see the woman you continue 
+                        to become—your strength, your passion, your gentle grace—and it only deepens my respect. 
+                        It’s a quiet, constant truth within me: knowing you, even for a while, was a privilege. 
+                        You are, and always will be, a standard of remarkable. <span style="color: #7b1fa2;">🌟</span><br><br>
+                        
+                        This time, I want to do things right. I want to truly get to know you, to listen to your 
+                        stories, to understand your dreams, and to be there for you in ways I couldn't before. 
+                        I want to build something real and beautiful with you. <span style="color: #7b1fa2;">💕</span><br><br>
+                        
+                        On a day dedicated to celebrating the heart, it's only natural that my thoughts orbit 
+                        entirely around you. Valentine's Day feels like a universal reminder of what I feel quietly 
+                        all year long: that you are the most beautiful memory I carry, and a hope that still glows 
+                        softly within me. <span style="color: #7b1fa2;">💝</span><br><br>
+
+                        So, with a heart full of honesty and a touch of hopeful courage, I'm asking: Would you do 
+                        me the extraordinary honor of being my Valentine? Not just in memory, but in the fresh, 
+                        hopeful light of today. I would cherish nothing more than the chance to celebrate you—to 
+                        share a smile, a conversation, and the simple, profound joy of your presence. <span style="color: #7b1fa2;">🌹</span><br><br>
+
+                        I dream of a day where I can show you, not just tell you, how deeply I admire the wonderful 
+                        person you are. To create a new memory, just for us, wrapped in the warmth of this special day. 
+                        You are the only one I could imagine asking this question. <span style="color: #7b1fa2;">🤲</span><br><br>
+
+                        Let's create new memories together - ones where distance doesn't matter, where our connection 
+                        grows stronger each day, and where we finally get to meet and start our story properly. 
+                        I promise to cherish this chance and to never take your heart for granted. 
+                        <span style="color: #7b1fa2;">🌟</span>
+                    </p>
+                    
+                    <div class="promise">
+                        "I may not have met you yet, but my heart has been waiting for you all along. 
+                        Let's write our next chapter together."
+                    </div>
+                </div>
+                <div class="images-container">
+                    <div class="image-row">
+                        <img src="/photo1.jpg" alt="Your beautiful smile" class="her-image" id="image1">
+                        <div class="image-caption">Your beautiful smile that lights up my world 🌟</div>
+                    </div>
+                    <div class="image-row">
+                        <img src="/photo2.jpg" alt="Special moments" class="her-image" id="image2">
+                        <div class="image-caption">Moments I'll always treasure 💫</div>
+                    </div>
+                    <div class="image-row">
+                        <img src="/photo3.png" alt="Me waiting for you" class="my-image" id="image3">
+                        <div class="image-caption my-caption">Me, waiting for our chance together 💙</div>
+                    </div>
+                    <div class="together-text">
+                        Two hearts, one dream 💞<br>
+                        Waiting to finally meet and begin our journey
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer">
+            With hope, admiration, and a heart full of possibility...<br>
+            Waiting for our new beginning. 💌
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+            const messageContainer = document.getElementById('messageContainer');
+            const floatingHearts = document.getElementById('floatingHearts');
+            const volumeControl = document.getElementById('volumeControl');
+            const volumeSlider = document.getElementById('volumeSlider');
+            const volumeIcon = document.getElementById('volumeIcon');
+            
+            // Audio setup
+            let audioContext;
+            let gainNode;
+            let isPlaying = false;
+            let volume = 0.7;
+            
+            // Initialize audio
+            function initAudio() {
+                try {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    gainNode = audioContext.createGain();
+                    gainNode.connect(audioContext.destination);
+                    gainNode.gain.value = volume;
+                    
+                    // Set up volume slider
+                    volumeSlider.addEventListener('input', function(e) {
+                        volume = parseFloat(e.target.value);
+                        if (gainNode) {
+                            gainNode.gain.value = volume;
+                        }
+                        // Update volume icon
+                        if (volume === 0) {
+                            volumeIcon.textContent = '🔇';
+                        } else if (volume < 0.5) {
+                            volumeIcon.textContent = '🔈';
+                        } else {
+                            volumeIcon.textContent = '🔊';
+                        }
+                    });
+                } catch (error) {
+                    console.log("Audio not supported in this browser");
+                }
+            }
+            
+            // Create floating hearts animation
+            function createFloatingHearts() {
+                const symbols = ['💕', '✨', '🌟', '💫', '💖', '💌', '💝'];
+                for (let i = 0; i < 20; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('floating-heart');
+                    heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.animationDelay = `${Math.random() * 20}s`;
+                    heart.style.fontSize = `${Math.random() * 10 + 12}px`;
+                    floatingHearts.appendChild(heart);
+                }
+            }
+            
+            // Create sparkle effect
+            function createSparkle(x, y) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.left = `${x}px`;
+                sparkle.style.top = `${y}px`;
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            }
+            
+            // Play romantic melody
+            function playRomanticMelody() {
+                if (!audioContext) return;
+                
+                const notes = [
+                    { freq: 523.25, duration: 0.8 }, // C5
+                    { freq: 659.25, duration: 0.8 }, // E5
+                    { freq: 698.46, duration: 0.8 }, // F5
+                    { freq: 783.99, duration: 1.2 }, // G5
+                    { freq: 659.25, duration: 0.8 }, // E5
+                    { freq: 523.25, duration: 1.5 }, // C5
+                    { freq: 440.00, duration: 0.8 }, // A4
+                    { freq: 493.88, duration: 1.5 }, // B4
+                ];
+                
+                let time = audioContext.currentTime;
+                
+                notes.forEach((note, index) => {
+                    const oscillator = audioContext.createOscillator();
+                    const noteGain = audioContext.createGain();
+                    
+                    oscillator.connect(noteGain);
+                    noteGain.connect(gainNode);
+                    
+                    oscillator.frequency.value = note.freq;
+                    oscillator.type = 'sine';
+                    
+                    noteGain.gain.setValueAtTime(0, time);
+                    noteGain.gain.linearRampToValueAtTime(volume * 0.5, time + 0.05);
+                    noteGain.gain.exponentialRampToValueAtTime(0.001, time + note.duration);
+                    
+                    oscillator.start(time);
+                    oscillator.stop(time + note.duration);
+                    
+                    time += note.duration;
+                    
+                    if (index < notes.length - 1) {
+                        time += 0.1;
+                    }
+                });
+                
+                setTimeout(() => {
+                    if (isPlaying) {
+                        playRomanticMelody();
+                    }
+                }, time - audioContext.currentTime + 1500);
+            }
+            /*
+            // Function to play romantic sound
+            function playRomanticSound() {
+                if (!audioContext) {
+                    initAudio();
+                }
+                
+                if (audioContext && audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                isPlaying = true;
+                playRomanticMelody();
+            }
+            */
+            createFloatingHearts();
+            
+            // Make the NO button move away when hovered
+            noButton.addEventListener('mouseover', function(event) {
+                const container = document.querySelector('.button-container');
+                const containerRect = container.getBoundingClientRect();
+                const buttonRect = noButton.getBoundingClientRect();
+                
+                // Calculate available space
+                const maxX = containerRect.width - buttonRect.width;
+                const maxY = containerRect.height - buttonRect.height;
+                
+                // Generate random position within container
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                
+                // Move the button to the random position
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+                
+                // Create sparkle effect
+                createSparkle(event.clientX, event.clientY);
+            });
+            
+            // Handle YES button click
+            yesButton.addEventListener('click', function() {
+                // Initialize audio on first interaction
+                if (!audioContext) {
+                    initAudio();
+                }
+                
+                // Show the romantic message
+                messageContainer.style.display = 'block';
+                
+                // Hide the buttons
+                yesButton.style.display = 'none';
+                noButton.style.display = 'none';
+                
+                // Create a celebration animation
+                createCelebration();
+                
+                // Play romantic sound
+                playRomanticSound();
+            });
+            
+            // Create celebration animation when she says YES
+            function createCelebration() {
+                const symbols = ['💕', '✨', '🌟', '💫', '💖', '💌', '💝', '🥰', '😍'];
+                
+                for (let i = 0; i < 60; i++) {
+                    setTimeout(() => {
+                        const symbol = document.createElement('div');
+                        symbol.classList.add('floating-heart');
+                        symbol.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                        symbol.style.left = `${Math.random() * 100}%`;
+                        symbol.style.fontSize = `${Math.random() * 20 + 15}px`;
+                        symbol.style.animationDuration = `${Math.random() * 4 + 3}s`;
+                        
+                        document.body.appendChild(symbol);
+                        
+                        setTimeout(() => {
+                            symbol.remove();
+                        }, 4000);
+                        
+                        if (i % 3 === 0) {
+                            createSparkle(
+                                Math.random() * window.innerWidth,
+                                Math.random() * window.innerHeight
+                            );
+                        }
+                    }, i * 100);
+                }
+            }
+            
+            // Add special click effects to images
+            document.querySelectorAll('.her-image').forEach(image => {
+                image.addEventListener('click', function(event) {
+                    for (let i = 0; i < 8; i++) {
+                        setTimeout(() => {
+                            createSparkle(
+                                event.clientX + (Math.random() * 100 - 50),
+                                event.clientY + (Math.random() * 100 - 50)
+                            );
+                        }, i * 50);
+                    }
+                });
+            });
+            
+            // Special effect for your photo
+            document.getElementById('image3').addEventListener('click', function(event) {
+                for (let i = 0; i < 12; i++) {
+                    setTimeout(() => {
+                        createSparkle(
+                            event.clientX + (Math.random() * 120 - 60),
+                            event.clientY + (Math.random() * 120 - 60)
+                        );
+                    }, i * 40);
+                }
+                
+                // Create a special blue sparkle effect
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        const blueSparkle = document.createElement('div');
+                        blueSparkle.style.position = 'absolute';
+                        blueSparkle.style.width = '15px';
+                        blueSparkle.style.height = '15px';
+                        blueSparkle.style.backgroundColor = '#4fc3f7';
+                        blueSparkle.style.borderRadius = '50%';
+                        blueSparkle.style.left = `${event.clientX + (Math.random() * 80 - 40)}px`;
+                        blueSparkle.style.top = `${event.clientY + (Math.random() * 80 - 40)}px`;
+                        blueSparkle.style.pointerEvents = 'none';
+                        blueSparkle.style.animation = 'sparkle 1.2s linear forwards';
+                        document.body.appendChild(blueSparkle);
+                        
+                        setTimeout(() => {
+                            blueSparkle.remove();
+                        }, 1200);
+                    }, i * 100);
+                }
+            });
+            
+            // Initialize audio when user interacts
+            document.addEventListener('click', function initAudioOnClick() {
+                if (!audioContext) {
+                    initAudio();
+                }
+                document.removeEventListener('click', initAudioOnClick);
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
